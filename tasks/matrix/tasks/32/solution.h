@@ -90,7 +90,7 @@ void Solution(Matrix matrix, size_t n) {
 }
 
 int Task() {
-    const char *filename = "../tasks/matrix/tasks/32/matrix.txt";
+    const char *filename = "../tasks/matrix/tasks/32/Matrix.txt";
     size_t n = 0;
     Matrix matrix = CreateFromFile(filename, &n);
     PrintMatrix(matrix, n);
