@@ -79,11 +79,8 @@ void FreeMatrix(Matrix matrix, size_t n) {
 }
 
 void Solution(Matrix matrix, size_t n) {
-    size_t i = 0;
-    size_t j = 0;
-
-    for (i; i < n; ++i) {
-        for (j = i + 1; j < n; ++j) {
+    for (size_t i = 0; i < n; ++i) {
+        for (size_t j = i + 1; j < n; ++j) {
             if (matrix[i][j] == matrix[j][i]) {
                 matrix[i][j] = 0;
                 matrix[j][i] = 0;
