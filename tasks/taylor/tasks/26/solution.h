@@ -23,7 +23,7 @@ double Taylor(double x, size_t* iterations) {
 
     double raise = DBL_EPSILON * PRECISION;
     while (i < MAX_ITERATIONS && fabs(raise) >= DBL_EPSILON * PRECISION) {
-        raise = cos(i * x) / (i * i);
+        raise = cos((double)i * x) / (i * i);
         raise *= ((i % 2) ? -1 : 1);
 
         answer += raise;
@@ -42,7 +42,7 @@ int Task() {
 
     printf("|                   Result of program for function (1 / 4) * (x ^ 2 - PI ^ 2 / 3) |\n");
     printf("-----------------------------------------------------------------------------------\n");
-    printf("|   x    |         Func(x)        |       Taylor(x)        | number of iterations |\n");
+    printf("|   x    |         Func(x)         |      Taylor(x)         |number of iterations |\n");
     printf("-----------------------------------------------------------------------------------\n");
 
     double delta = (B - A) / N;
