@@ -23,7 +23,7 @@ double Taylor(double x, size_t* iterations) {
 
     double raise = DBL_EPSILON * PRECISION;
     while (i < MAX_ITERATIONS && fabs(raise) >= DBL_EPSILON * PRECISION) {
-        raise = cos((double)i * x) / (i * i);
+        raise = cos((double)i * x) / (double)(i * i);
         raise *= ((i % 2) ? -1 : 1);
 
         answer += raise;
