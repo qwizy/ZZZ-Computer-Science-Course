@@ -18,6 +18,8 @@ StateName Start(StateMachine* sm) {
         sm->slash_count = 0;
         return START;
     }
+
+    return 0;
 }
 
 StateName Count(StateMachine* sm) {
@@ -37,6 +39,8 @@ StateName Count(StateMachine* sm) {
         sm->slash_count = 0;
         return START;
     }
+
+    return 0;
 }
 
 State* MakeStates() {
