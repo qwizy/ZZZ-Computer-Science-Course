@@ -9,10 +9,12 @@
 StateName Start(StateMachine* sm) {
     if ((sm->current_char == '/') && (sm->slash_count == 1)) {
         return COUNT;
-    } if ((sm->current_char == '/') && (sm->slash_count == 0)) {
+    }
+    if ((sm->current_char == '/') && (sm->slash_count == 0)) {
         ++sm->slash_count;
         return START;
-    } if (sm->current_char != '/') {
+    }
+    if (sm->current_char != '/') {
         sm->slash_count = 0;
         return START;
     }
@@ -21,13 +23,16 @@ StateName Start(StateMachine* sm) {
 StateName Count(StateMachine* sm) {
     if ((!sm->check_word) && (sm->current_char == ' ')) {
         return COUNT;
-    } if ((sm->current_char != ' ') && (sm->current_char != '\n')) {
+    }
+    if ((sm->current_char != ' ') && (sm->current_char != '\n')) {
         sm->check_word = true;
         return COUNT;
-    } if ((sm->current_char == ' ') && (sm->check_word)) {
+    }
+    if ((sm->current_char == ' ') && (sm->check_word)) {
         ++sm->word_count;
         return COUNT;
-    } if (sm->current_char == '\n') {
+    }
+    if (sm->current_char == '\n') {
         sm->check_word = false;
         sm->slash_count = 0;
         return START;
