@@ -19,7 +19,7 @@ StateName Start(StateMachine* sm) {
         return START;
     }
 
-    return 0;
+    return START;
 }
 
 StateName Count(StateMachine* sm) {
@@ -40,7 +40,7 @@ StateName Count(StateMachine* sm) {
         return START;
     }
 
-    return 0;
+    return COUNT;
 }
 
 State* MakeStates() {
