@@ -6,7 +6,7 @@
 
 typedef enum {
     START,
-    COUNT, 
+    COUNT,
     STATECOUNT,
 } StateName;
 
