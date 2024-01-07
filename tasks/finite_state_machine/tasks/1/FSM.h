@@ -6,7 +6,7 @@
 
 int Task() {
     StateMachine* sm = CreateStateMachine();
-    FILE* fp = fopen("D:/DATA/VS_Code_Files/C_Files/Fsm_Lab_1/text.txt", "r");
+    FILE* fp = fopen("../tasks/finite_state_machine/tasks/1/text.txt", "r");
     char c = ' ';
 
     while ((c = (char)fgetc(fp)) != EOF) {
